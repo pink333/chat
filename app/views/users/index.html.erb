@@ -1,0 +1,9 @@
+<h1>Usersindex</h1>
+<div class="post_wrapper">
+  <% @users.each do |user| %>
+  <div class="post_box">
+    <h3 class="title"><%= link_to user.username, user %></h3>
+    <h3 class="title"><%= user.id  %></h3>
+  </div>
+  <% end %>
+ </div>
