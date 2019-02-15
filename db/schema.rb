@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_08_172141) do
+ActiveRecord::Schema.define(version: 2019_02_15_115014) do
 
   create_table "posts", force: :cascade do |t|
     t.text "belo"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_02_08_172141) do
     t.string "username"
     t.string "userdes"
     t.text "usertxt"
+    t.string "picture"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 

@@ -11,10 +11,15 @@ class PostsController < ApplicationController
     redirect_to user_path(@user)
 
   end
+ 
 
-  def edit
+  def show
     @user = User.find(params[:user_id])
     @post = @user.posts.find(params[:id])
+  end
+
+  def edit
+    
   end
 
   def update

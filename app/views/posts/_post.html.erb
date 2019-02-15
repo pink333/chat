@@ -1,8 +1,6 @@
-<h3>Post.html</h3>
-<%= post.belo %>
-<%= post.content %>
+<h3><%= post.belo %></h3>
+<h3><%= post.content %></h3>
 <% if  current_user == post.user %>
 <div class="cd"><%= link_to '削除', [post.user, post], method: :delete, class: "buttn", date:{confirm: 'Are you sure'} %></div>
-<%= link_to "編集" ,edit_user_post_path(current_user) %>
 <% end %>
 </div>

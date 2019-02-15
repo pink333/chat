@@ -1,5 +1,12 @@
 <h1>Usersshow</h1>
-<%= @user.username %></br>
-<%= render @user.posts %></br>
+<h3>  名前：<%= @user.username %></h3>
+<h3>所属：<%= @user.userdes %></h3>
+<h3>自己紹介：<%= @user.usertxt %></h3>
+<%= image_tag @user.picture.url if @user.picture? %>
+<% if  @user == current_user  %>
+  <%= link_to "編集", edit_user_path(current_user) %>
+<% end %>
+<%= render @user.posts %>
 <%= render "posts/form" %>
+
 
