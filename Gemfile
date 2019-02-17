@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'sass-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'sqlite3', group: :development
