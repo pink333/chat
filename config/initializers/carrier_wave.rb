@@ -1,6 +1,6 @@
 require 'carrierwave/storage/abstract'
 require 'carrierwave/storage/file'
-require 'carrierwave/storage/fog'
+require 'carrierwave/storage/fog-aws'
 
 if Rails.env.production?
   CarrierWave.configure do |config|
