@@ -37,7 +37,7 @@ gem 'sass-rails',   '5.0.6'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'sqlite3', group: :development
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 #gem 'sqlite3', '~>1.3.6'
@@ -48,6 +48,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'sqlite3', '~> 1.3.6'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
