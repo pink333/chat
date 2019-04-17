@@ -1,5 +1,5 @@
 <h1>Usersshow</h1>
-<h3>  名前：<%= @user.username %></h3>
+<h3>名前：<%= @user.username %></h3>
 <h3>所属：<%= @user.userdes %></h3>
 <h3>自己紹介：<%= @user.usertxt %></h3>
 <%= image_tag @user.picture.url if @user.picture? %>
@@ -8,5 +8,22 @@
 <% end %>
 <%= render @user.posts %>
 <%= render "posts/form" %>
+
+<% @user ||= current_user %>
+<div class="stats">
+  <a href="<%= following_user_path(@user) %>">
+    <strong id="following" class="stat">
+      <%= @user.following.count %>
+    </strong>
+    following
+  </a>
+  <a href="<%= followers_user_path(@user) %>">
+    <strong id="followers" class="stat">
+      <%= @user.followers.count %>
+    </strong>
+    followers
+  </a>
+</div>
+<%= render 'follow_form' if user_signed_in? %>
 
 
