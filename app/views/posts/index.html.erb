@@ -1,0 +1,8 @@
+<h2>POSTS</h2>
+<div class="post_wrapper">
+  <% @user.posts.each do |post| %>
+  <div class="post_box">
+    <h3 class="title"><%= link_to post.belo, post %></h3>
+    <h3 class="title"><%= link_to post.content, post %></h3>
+  <% end %>
+ </div>

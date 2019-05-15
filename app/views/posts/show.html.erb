@@ -1,0 +1,10 @@
+<h3><%= @post.belo %></h3>
+<h3><%= @post.content %></h3>
+<h3>いいね件数: <%= @post.likes.count %></h3>
+<% if current_user.already_liked?(@post) %>
+  <%= button_to 'いいねを取り消す', post_like_path(@post), method: :delete %>
+<% else %>
+  <%= button_to 'いいね', post_likes_path(@post) %>
+<% end %>
+<%= link_to "戻る", @user  %>
+<%= link_to "Topに戻る", root_path %>
